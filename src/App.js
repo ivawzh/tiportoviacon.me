@@ -1,21 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.css';
 
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+
+import './App.css';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#616161',
+      main: '#424242',
+      dark: '#212121',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#4DB6AC',
+      main: '#26A69A',
+      dark: '#009688',
+      contrastText: '#000',
+    },
+  },
+});
+
 class App extends Component {
+
   render() {
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+
+      <MuiThemeProvider theme={theme}>
+
+        <CssBaseline />
+
+        <JovanottiAppBar />
+
+        <JovanottiTabs />
+
+      </MuiThemeProvider>
+
     );
   }
+
 }
 
 export default App;
