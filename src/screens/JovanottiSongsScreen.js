@@ -28,14 +28,13 @@ const JovanottiSearchBox = ({ currentRefinement, refine }) =>
         type="search"
         fullWidth
         style={styles.textField}
-
         value={currentRefinement}
         onChange={e => refine(e.target.value)}
     />;
 
 const ConnectedJovanottiSearchBox = connectSearchBox(JovanottiSearchBox);
 
-function Product({ hit }) {
+function JovanottiCard({ hit }) {
     return <div>{hit.name} ciao</div>;
 }
 
@@ -51,7 +50,7 @@ class JovanottiSongsScreen extends React.Component {
 
                     <ConnectedJovanottiSearchBox />
 
-                    <Hits hitComponent={Product} />
+                    <Hits hitComponent={JovanottiCard} />
 
                 </InstantSearch>
             </div>
