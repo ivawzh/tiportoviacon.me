@@ -22,15 +22,20 @@ class JovanottiSongsScreen extends React.Component {
     render() {
         return (
             <div>
-                <form className={styles.container} noValidate autoComplete="off">
-                    <TextField
-                        id="jovanotti-songs"
-                        label="qualfiafi parola di una canzone..."
-                        type="search"
-                        fullWidth
-                        style={styles.textField}
-                    />
-                </form>
+                <InstantSearch
+                    appId="latency"
+                    apiKey="3d9875e51fbd20c7754e65422f7ce5e1"
+                    indexName="bestbuy">
+                    <form className={styles.container} noValidate autoComplete="off">
+                        <TextField
+                            id="jovanotti-songs"
+                            label="qualfiafi parola di una canzone..."
+                            type="search"
+                            fullWidth
+                            style={styles.textField}
+                        />
+                    </form>
+                </InstantSearch>
             </div>
         );
     }
