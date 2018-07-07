@@ -1,54 +1,62 @@
 import React from 'react';
 
 import TextField from '@material-ui/core/TextField';
-import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import SkipNextIcon from '@material-ui/icons/SkipNext';
 
 // Algolia
 import { InstantSearch, Hits } from 'react-instantsearch-dom';
 import { connectSearchBox } from 'react-instantsearch-dom';
 
-const styles = theme => ({
+const styles = {
     container: {
         display: 'flex',
         flexWrap: 'wrap',
-    },
-    textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
-        width: 200,
-    },
-    menu: {
-        width: 200,
     },
     root: {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper,
-    },
-    gridList: {
-        width: 500,
-        height: 450,
-    },
-    subheader: {
-        width: '100%',
     },
     card: {
-        maxWidth: 345,
+        display: 'flex',
+        width: '100%',
+        marginTop: 24
     },
-    media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
+    details: {
+        display: 'flex',
+        flexDirection: 'column',
     },
-});
+    content: {
+        flex: '1 0 auto',
+    },
+    cover: {
+        width: 180,
+        height: 180,
+    },
+    controls: {
+        display: 'flex',
+        alignItems: 'center',
+        paddingLeft: 24,
+        paddingBottom: 24,
+    },
+    playIcon: {
+        height: 38,
+        width: 38,
+    },
+};
 
 const JovanottiSearchBox = ({ currentRefinement, refine }) =>
     <TextField
@@ -56,7 +64,6 @@ const JovanottiSearchBox = ({ currentRefinement, refine }) =>
         label="qualfiafi parola di una canzone..."
         type="search"
         fullWidth
-        style={styles.textField}
         value={currentRefinement}
         onChange={e => refine(e.target.value)}
     />;
@@ -65,33 +72,32 @@ const ConnectedJovanottiSearchBox = connectSearchBox(JovanottiSearchBox);
 
 function JovanottiCard({ hit }) {
     return (
-        <GridListTile cols={1}>
-            
-            <Card className={styles.card}>
-                <CardMedia
-                    className={styles.media}
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    title="Contemplative Reptile"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2">
-                        {hit.name}
-        </Typography>
-                    <Typography component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-        </Typography>
+        <Card style={styles.card}>
+            <CardMedia
+                style={styles.cover}
+                image="http://www.gossipitaliano.net/wp-content/uploads/2018/02/jovanotti.jpg"
+                title="Live from space album cover"
+            />
+            <div style={styles.details}>
+                <CardContent style={styles.content}>
+                    <Typography variant="headline">{hit.name}</Typography>
+                    <Typography variant="subheading" color="textSecondary">
+                        Mac Miller
+            </Typography>
                 </CardContent>
-                <CardActions>
-                    <Button size="small" color="primary">
-                        Share
-        </Button>
-                    <Button size="small" color="primary">
-                        Learn More
-        </Button>
-                </CardActions>
-            </Card>
-            </GridListTile>
+                <div style={styles.controls}>
+                    <IconButton aria-label="Previous">
+                        <SkipPreviousIcon />
+                    </IconButton>
+                    <IconButton aria-label="Play/pause">
+                        <PlayArrowIcon style={styles.playIcon} />
+                    </IconButton>
+                    <IconButton aria-label="Next">
+                        <SkipNextIcon />
+                    </IconButton>
+                </div>
+            </div>
+        </Card>
     );
 }
 
@@ -107,10 +113,8 @@ class JovanottiSongsScreen extends React.Component {
 
                     <ConnectedJovanottiSearchBox />
 
-                    <div className={styles.root}>
-                        <GridList cellHeight={160} className={styles.gridList} cols={3}>
-                            <Hits hitComponent={JovanottiCard} />
-                        </GridList>
+                    <div style={styles.root}>
+                        <Hits hitComponent={JovanottiCard} />
                     </div>
 
                 </InstantSearch>
