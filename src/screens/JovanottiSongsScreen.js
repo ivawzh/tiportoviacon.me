@@ -25,7 +25,7 @@ class JovanottiSongsScreen extends React.Component {
                 <form className={styles.container} noValidate autoComplete="off">
                     <TextField
                         id="jovanotti-songs"
-                        label="Search field"
+                        label="qualfiafi parola di una canzone..."
                         type="search"
                         fullWidth
                         style={styles.textField}
