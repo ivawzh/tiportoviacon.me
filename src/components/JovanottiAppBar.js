@@ -5,7 +5,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
 
 import Modal from '@material-ui/core/Modal';
 
@@ -61,7 +60,7 @@ class JovanottiAppBar extends React.Component {
         <AppBar position="static">
           <Toolbar>
             <IconButton onClick={this.handleOpenInfo} style={styles.menuButton} color="inherit" aria-label="Menu">
-              <InfoIcon />
+              <img src='images/bolt.png' width={120}/>
             </IconButton>
             <Typography variant="title" color="inherit" style={styles.flex}>
               tiportoviacon.me
