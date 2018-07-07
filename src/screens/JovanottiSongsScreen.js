@@ -1,13 +1,14 @@
 import React from 'react';
 
 import TextField from '@material-ui/core/TextField';
-import GridList from '@material-ui/core/GridList';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 
 // Algolia
 import { InstantSearch, Hits } from 'react-instantsearch-dom';
@@ -64,7 +65,8 @@ const ConnectedJovanottiSearchBox = connectSearchBox(JovanottiSearchBox);
 
 function JovanottiCard({ hit }) {
     return (
-        <div>
+        <GridListTile cols={1}>
+            
             <Card className={styles.card}>
                 <CardMedia
                     className={styles.media}
@@ -89,7 +91,7 @@ function JovanottiCard({ hit }) {
         </Button>
                 </CardActions>
             </Card>
-        </div>
+            </GridListTile>
     );
 }
 
