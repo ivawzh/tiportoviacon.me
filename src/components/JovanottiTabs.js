@@ -4,22 +4,10 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 
 // Screens
 import JovanottiSongsScreen from '../screens/JovanottiSongsScreen';
-
-function TabContainer(props) {
-    return (
-        <Typography component="div" style={{ padding: 8 * 3 }}>
-            {props.children}
-        </Typography>
-    );
-}
-
-TabContainer.propTypes = {
-    children: PropTypes.node.isRequired,
-};
+import InformazioniScreen from '../screens/InformazioniScreen';
 
 const styles = theme => ({
     root: {
@@ -55,15 +43,13 @@ class JovanottiTabs extends React.Component {
             <div className={classes.root}>
                 <AppBar position="static">
                     <Tabs value={value} onChange={this.handleChange}>
-                        <Tab label="James Joyce" href="#joyce" />
-                        <Tab label="Oriana Fallaci" href="#fallaci" />
-                        <Tab label="Filippo Tommaso Marinetti" href="#marinetti" />
+                        <Tab label="Le canzoni" href="#lecanzoni" />
+                        <Tab label="Informazioni" href="#informazioni" />
                     </Tabs>
                 </AppBar>
                 <div className={classes.screen}>
                     {value === 0 && <JovanottiSongsScreen />}
-                    {value === 1 && <TabContainer>Item Two</TabContainer>}
-                    {value === 2 && <TabContainer>Item Three</TabContainer>}
+                    {value === 1 && <InformazioniScreen />}
                 </div>
             </div>
         );
