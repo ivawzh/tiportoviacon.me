@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
 // Algolia
 import { InstantSearch, InfiniteHits, connectSearchBox, PoweredBy } from 'react-instantsearch-dom';
@@ -31,6 +32,12 @@ const JovanottiSearchBox = ({ currentRefinement, refine }) =>
         onChange={e => refine(e.target.value)}
     />;
 
+const JovanottiInfiniteHits = ({ hits, hasMore, refine }) =>
+    <div>
+        {hits.forEach(song => <JovanottiSong song={song} />)}
+    </div>
+    ;
+
 const ConnectedJovanottiSearchBox = connectSearchBox(JovanottiSearchBox);
 
 class JovanottiSongsScreen extends React.Component {
@@ -49,7 +56,11 @@ class JovanottiSongsScreen extends React.Component {
                         <InfiniteHits hitComponent={h => <JovanottiSong song={h} />} />
                     </div>
 
-                    <PoweredBy />
+                    <div className="powered-by">
+                        <Typography>
+                            <PoweredBy />
+                        </Typography>
+                    </div>
 
                 </InstantSearch>
             </div>
