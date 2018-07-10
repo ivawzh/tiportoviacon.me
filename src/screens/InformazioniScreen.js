@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import EmailIcon from '@material-ui/icons/Email';
 
 const styles = {
     heart: {
@@ -22,13 +23,14 @@ class InformazioniScreen extends React.Component {
                 <Typography>
                     ...altre funzionalità in arrivo!
             </Typography>
-            <br/>
+                <br />
                 <Typography>
                     creato con <FavoriteIcon style={styles.heart} /> da Matteo Manzinello
             </Typography>
-                <Button color="primary" >
-                    Il mio sito web
-      </Button>
+                <br />
+                <Button variant="fab" color="secondary" aria-label="email">
+                    <EmailIcon />
+                </Button>
             </div>
         );
     }
