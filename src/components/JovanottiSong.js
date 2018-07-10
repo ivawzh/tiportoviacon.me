@@ -63,13 +63,13 @@ class JovanottiSong extends React.Component {
             </Typography>
                     </CardContent>
                     <div style={styles.controls}>
-                        <IconButton aria-label="Previous">
+                        <IconButton aria-label="Text">
                             <SubjectIcon />
                         </IconButton>
-                        <IconButton aria-label="Play/pause">
+                        <IconButton aria-label="Spotify">
                             <MusicNoteIcon style={styles.playIcon} />
                         </IconButton>
-                        <IconButton aria-label="Next">
+                        <IconButton aria-label="Video">
                             <VideocamIcon />
                         </IconButton>
                     </div>
