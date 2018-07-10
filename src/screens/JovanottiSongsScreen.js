@@ -49,8 +49,8 @@ const styles = {
         paddingBottom: 24,
     },
     playIcon: {
-        height: 38,
-        width: 38,
+        height: 50,
+        width: 50,
     },
 };
 
@@ -80,7 +80,7 @@ function JovanottiCard({ hit }) {
                 <CardContent style={styles.content}>
                     <Typography variant="headline">{hit.name}</Typography>
                     <Typography variant="subheading" color="textSecondary">
-                        Mac Miller
+                        Lorenzo Jovanotti
             </Typography>
                 </CardContent>
                 <div style={styles.controls}>

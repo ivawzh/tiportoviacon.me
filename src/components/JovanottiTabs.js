@@ -5,6 +5,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
+import QueueMusicIcon from '@material-ui/icons/QueueMusic';
+import InfoIcon from '@material-ui/icons/Info';
+
 // Screens
 import JovanottiSongsScreen from '../screens/JovanottiSongsScreen';
 import InformazioniScreen from '../screens/InformazioniScreen';
@@ -43,8 +46,8 @@ class JovanottiTabs extends React.Component {
             <div className={classes.root}>
                 <AppBar position="static">
                     <Tabs value={value} onChange={this.handleChange}>
-                        <Tab label="Le canzoni" href="#lecanzoni" />
-                        <Tab label="Informazioni" href="#informazioni" />
+                        <Tab label="Le canzoni" icon={<QueueMusicIcon />} href="#lecanzoni" />
+                        <Tab label="Informazioni" icon={<InfoIcon />}  href="#informazioni" />
                     </Tabs>
                 </AppBar>
                 <div className={classes.screen}>
