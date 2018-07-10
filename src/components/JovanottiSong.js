@@ -6,7 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 
-import VideocamIcon from '@material-ui/icons/Videocam';
+import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import SubjectIcon from '@material-ui/icons/Subject';
 
@@ -70,7 +70,7 @@ class JovanottiSong extends React.Component {
                             <MusicNoteIcon style={styles.playIcon} />
                         </IconButton>
                         <IconButton aria-label="Video">
-                            <VideocamIcon />
+                            <OndemandVideoIcon />
                         </IconButton>
                     </div>
                 </div>
