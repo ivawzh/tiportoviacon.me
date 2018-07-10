@@ -24,6 +24,7 @@ const styles = {
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
+        width: '100%'
     },
     card: {
         display: 'flex',
@@ -56,7 +57,7 @@ const styles = {
 const JovanottiSearchBox = ({ currentRefinement, refine }) =>
     <TextField
         id="jovanotti-songs"
-        label="qualfiafi parola di una canzone..."
+        label="...in questa notte fantastica!"
         type="search"
         fullWidth
         value={currentRefinement}
