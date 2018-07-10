@@ -33,12 +33,6 @@ const JovanottiSearchBox = ({ currentRefinement, refine }) =>
 
 const ConnectedJovanottiSearchBox = connectSearchBox(JovanottiSearchBox);
 
-function JovanottiCard({ hit }) {
-    return (
-        <JovanottiSong song={hit} />
-    );
-}
-
 class JovanottiSongsScreen extends React.Component {
 
     render() {
@@ -52,7 +46,7 @@ class JovanottiSongsScreen extends React.Component {
                     <ConnectedJovanottiSearchBox />
 
                     <div style={styles.root}>
-                        <InfiniteHits hitComponent={JovanottiCard} />
+                        <InfiniteHits hitComponent={h => <JovanottiSong song={h} />} />
                     </div>
 
                     <PoweredBy />
