@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,18 +17,18 @@ const styles = theme => ({
         flexGrow: 1,
         flex: 1,
         backgroundColor: theme.palette.background.paper,
-        height:'100%'
+        height: '100%'
     },
     screen: {
         flexGrow: 1,
         flex: 1,
         background: 'white',
         padding: 24,
-        height:'100%'
+        height: '100%'
     }
 });
 
-class JovanottiTabs extends React.Component {
+class JovanottiTabs extends Component {
 
     state = {
         value: 0,
@@ -47,7 +47,7 @@ class JovanottiTabs extends React.Component {
                 <AppBar position="static">
                     <Tabs value={value} onChange={this.handleChange}>
                         <Tab label="Le canzoni" icon={<QueueMusicIcon />} href="#lecanzoni" />
-                        <Tab label="Informazioni" icon={<InfoIcon />}  href="#informazioni" />
+                        <Tab label="Informazioni" icon={<InfoIcon />} href="#informazioni" />
                     </Tabs>
                 </AppBar>
                 <div className={classes.screen}>

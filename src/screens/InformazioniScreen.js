@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -15,7 +15,7 @@ const styles = {
     }
 }
 
-class InformazioniScreen extends React.Component {
+class InformazioniScreen extends Component {
 
     render() {
         return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
@@ -40,7 +40,7 @@ const JovanottiInfiniteHits = ({ hits, hasMore, refine }) =>
 
 const ConnectedJovanottiSearchBox = connectSearchBox(JovanottiSearchBox);
 
-class JovanottiSongsScreen extends React.Component {
+class JovanottiSongsScreen extends Component {
 
     render() {
         return (

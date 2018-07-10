@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -39,7 +39,7 @@ const styles = {
     },
 };
 
-class JovanottiSong extends React.Component {
+class JovanottiSong extends Component {
 
     state = {
         song: this.props.song.hit
