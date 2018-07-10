@@ -41,6 +41,10 @@ const styles = {
 
 class JovanottiSong extends React.Component {
 
+    state = {
+        song: this.props.song.hit
+    }
+
     render() {
         return (
             <Card style={styles.card}>
@@ -53,7 +57,7 @@ class JovanottiSong extends React.Component {
                 </div>
                 <div style={styles.details}>
                     <CardContent style={styles.content}>
-                        <Typography variant="headline">{this.props.song.name}</Typography>
+                        <Typography variant="headline">{this.state.song.name}</Typography>
                         <Typography variant="subheading" color="textSecondary">
                             Lorenzo Jovanotti
             </Typography>
