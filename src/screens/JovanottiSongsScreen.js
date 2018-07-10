@@ -7,8 +7,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 
-import InfoIcon from '@material-ui/icons/Info';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import VideocamIcon from '@material-ui/icons/Videocam';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import SubjectIcon from '@material-ui/icons/Subject';
 
 // Algolia
@@ -50,8 +50,8 @@ const styles = {
         paddingBottom: 24,
     },
     playIcon: {
-        height: 50,
-        width: 50,
+        height: 46,
+        width: 46,
     },
 };
 
@@ -86,13 +86,13 @@ function JovanottiCard({ hit }) {
                 </CardContent>
                 <div style={styles.controls}>
                     <IconButton aria-label="Previous">
-                        <InfoIcon />
+                        <SubjectIcon />
                     </IconButton>
                     <IconButton aria-label="Play/pause">
-                        <PlayArrowIcon style={styles.playIcon} />
+                        <MusicNoteIcon style={styles.playIcon} />
                     </IconButton>
                     <IconButton aria-label="Next">
-                        <SubjectIcon />
+                        <VideocamIcon />
                     </IconButton>
                 </div>
             </div>
