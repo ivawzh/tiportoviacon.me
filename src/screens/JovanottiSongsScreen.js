@@ -12,8 +12,7 @@ import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import SubjectIcon from '@material-ui/icons/Subject';
 
 // Algolia
-import { InstantSearch, Hits } from 'react-instantsearch-dom';
-import { connectSearchBox } from 'react-instantsearch-dom';
+import { InstantSearch, InfiniteHits, connectSearchBox } from 'react-instantsearch-dom';
 
 const styles = {
     container: {
@@ -50,8 +49,8 @@ const styles = {
         paddingBottom: 24,
     },
     playIcon: {
-        height: 46,
-        width: 46,
+        height: 44,
+        width: 44,
     },
 };
 
@@ -113,7 +112,7 @@ class JovanottiSongsScreen extends React.Component {
                     <ConnectedJovanottiSearchBox />
 
                     <div style={styles.root}>
-                        <Hits hitComponent={JovanottiCard} />
+                        <InfiniteHits hitComponent={JovanottiCard} />
                     </div>
 
                 </InstantSearch>
