@@ -6,9 +6,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+import InfoIcon from '@material-ui/icons/Info';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
+import SubjectIcon from '@material-ui/icons/Subject';
 
 // Algolia
 import { InstantSearch, Hits } from 'react-instantsearch-dom';
@@ -69,11 +69,13 @@ const ConnectedJovanottiSearchBox = connectSearchBox(JovanottiSearchBox);
 function JovanottiCard({ hit }) {
     return (
         <Card style={styles.card}>
-            <CardMedia
-                style={styles.cover}
-                image="http://www.gossipitaliano.net/wp-content/uploads/2018/02/jovanotti.jpg"
-                title="Live from space album cover"
-            />
+            <div className="jovanotti-card-media">
+                <CardMedia
+                    style={styles.cover}
+                    image="http://www.gossipitaliano.net/wp-content/uploads/2018/02/jovanotti.jpg"
+                    title="Live from space album cover"
+                />
+            </div>
             <div style={styles.details}>
                 <CardContent style={styles.content}>
                     <Typography variant="headline">{hit.name}</Typography>
@@ -83,13 +85,13 @@ function JovanottiCard({ hit }) {
                 </CardContent>
                 <div style={styles.controls}>
                     <IconButton aria-label="Previous">
-                        <SkipPreviousIcon />
+                        <InfoIcon />
                     </IconButton>
                     <IconButton aria-label="Play/pause">
                         <PlayArrowIcon style={styles.playIcon} />
                     </IconButton>
                     <IconButton aria-label="Next">
-                        <SkipNextIcon />
+                        <SubjectIcon />
                     </IconButton>
                 </div>
             </div>
