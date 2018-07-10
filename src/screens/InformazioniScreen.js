@@ -28,7 +28,7 @@ class InformazioniScreen extends React.Component {
                     creato con <FavoriteIcon style={styles.heart} /> da Matteo Manzinello
             </Typography>
                 <br />
-                <Button variant="fab" color="secondary" aria-label="email">
+                <Button href="mailto:ciao@matteomanzinello.com" variant="fab" color="secondary" aria-label="email">
                     <EmailIcon />
                 </Button>
             </div>
