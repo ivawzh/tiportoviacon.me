@@ -8,8 +8,6 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import JovanottiAppBar from './components/JovanottiAppBar';
 import JovanottiTabs from './components/JovanottiTabs';
 
-import './App.css';
-
 const theme = createMuiTheme({
   palette: {
     primary: {
