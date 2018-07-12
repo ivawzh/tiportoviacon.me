@@ -46,9 +46,9 @@ class JovanottiSongsScreen extends Component {
         return (
             <div>
                 <InstantSearch
-                    appId="latency"
-                    apiKey="3d9875e51fbd20c7754e65422f7ce5e1"
-                    indexName="bestbuy">
+                    appId="32XDPON7V4"
+                    apiKey="f5fe4c3a7838a8e27fba1965eb71fe76"
+                    indexName="songs">
 
                     <ConnectedJovanottiSearchBox />
 
