@@ -57,7 +57,7 @@ class JovanottiSong extends Component {
                 </div>
                 <div style={styles.details}>
                     <CardContent style={styles.content}>
-                        <Typography variant="headline">{this.state.song.name}</Typography>
+                        <Typography variant="headline">{this.state.song.title}</Typography>
                         <Typography variant="subheading" color="textSecondary">
                             Lorenzo Jovanotti
             </Typography>
@@ -66,10 +66,10 @@ class JovanottiSong extends Component {
                         <IconButton aria-label="Text">
                             <SubjectIcon />
                         </IconButton>
-                        <IconButton aria-label="Spotify">
+                        <IconButton href={this.state.song.spotify} aria-label="Spotify">
                             <MusicNoteIcon style={styles.playIcon} />
                         </IconButton>
-                        <IconButton aria-label="Video">
+                        <IconButton href={this.state.song.youtube} aria-label="Video">
                             <OndemandVideoIcon />
                         </IconButton>
                     </div>
