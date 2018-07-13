@@ -42,6 +42,7 @@ const styles = {
 class JovanottiSong extends Component {
 
     state = {
+        coverBaseUrl: "https://manzinello.github.io/tiportoviacon.me/images/album/",
         song: this.props.song.hit
     }
 
@@ -51,7 +52,7 @@ class JovanottiSong extends Component {
                 <div className="jovanotti-card-media">
                     <CardMedia
                         style={styles.cover}
-                        image="http://www.gossipitaliano.net/wp-content/uploads/2018/02/jovanotti.jpg"
+                        image={this.state.coverBaseUrl + this.state.song.image}
                         title="Live from space album cover"
                     />
                 </div>
