@@ -25,8 +25,12 @@ const styles = {
 const JovanottiSearchBox = ({ currentRefinement, refine }) =>
     <TextField
         id="jovanotti-songs"
-        label="...in questa notte fantastica! Ti porto via con me! Ribalteremo il mooooooooondo!"
+        label="Cerca qualsiasi cosa tu voglia!"
+        placeholder="...in questa notte fantastica!"
         type="search"
+        InputLabelProps={{
+          shrink: true,
+        }}
         fullWidth
         value={currentRefinement}
         onChange={e => refine(e.target.value)}
