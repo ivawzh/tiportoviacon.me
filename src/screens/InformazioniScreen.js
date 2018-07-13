@@ -29,9 +29,6 @@ class InformazioniScreen extends Component {
                     creato con <FavoriteIcon style={styles.heart} /> da Matteo Manzinello
             </Typography>
                 <br />
-                <Button href="https://matteomanzinello.com" variant="fab" color="secondary" aria-label="www">
-                    <WebIcon />
-                </Button>
                 <Button href="mailto:ciao@matteomanzinello.com" variant="fab" color="secondary" aria-label="email">
                     <EmailIcon />
                 </Button>
