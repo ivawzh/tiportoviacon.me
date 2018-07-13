@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import WebIcon from '@material-ui/icons/Web';
 import EmailIcon from '@material-ui/icons/Email';
 
 const styles = {
