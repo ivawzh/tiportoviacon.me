@@ -60,7 +60,7 @@ class JovanottiAppBar extends Component {
         <AppBar position="static">
           <Toolbar>
             <IconButton onClick={this.handleOpenInfo} style={styles.menuButton} color="inherit" aria-label="Menu">
-              <img src='images/bolt.png' width={120} alt='tiportoviacon.me'/>
+              <img src='images/bolt.png' width={48} alt='tiportoviacon.me'/>
             </IconButton>
             <Typography variant="title" color="inherit" style={styles.flex}>
               tiportoviacon.me
