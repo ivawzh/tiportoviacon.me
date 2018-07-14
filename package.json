@@ -2,7 +2,7 @@
   "name": "tiportoviacon.me",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://manzinello.github.io/tiportoviacon.me",
+  "homepage": "https://tiportoviacon.me",
   "dependencies": {
     "@material-ui/core": "^1.3.1",
     "@material-ui/icons": "^1.1.0",
