@@ -60,8 +60,8 @@ class JovanottiSong extends Component {
                     <CardContent style={styles.content}>
                         <Typography variant="headline">{this.state.song.title}</Typography>
                         <Typography variant="subheading" color="textSecondary">
-                            Lorenzo Jovanotti
-            </Typography>
+                            {this.state.song["album-name"]}
+                        </Typography>
                     </CardContent>
                     <div style={styles.controls}>
                         <IconButton aria-label="Text">
