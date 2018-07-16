@@ -60,39 +60,38 @@ class JovanottiAppBar extends Component {
         <AppBar position="static">
           <Toolbar>
             <IconButton onClick={this.handleOpenInfo} style={styles.menuButton} color="inherit" aria-label="Menu">
-              <img src='images/bolt.png' width={48} alt='tiportoviacon.me'/>
+              <img src='images/bolt.png' width={48} alt='tiportoviacon.me' />
             </IconButton>
             <Typography variant="title" color="inherit" style={styles.flex}>
               tiportoviacon.me
           </Typography>
             <Button color="inherit" onClick={this.handleOpenEh}>EH?!</Button>
             <Modal
-              aria-labelledby="simple-modal-title"
-              aria-describedby="simple-modal-description"
+              aria-labelledby="eh-modal-title"
+              aria-describedby="eh-modal-description"
               open={this.state.eh}
               onClose={this.handleCloseEh}
             >
               <div style={styles.paper}>
                 <Typography variant="title" id="modal-title">
-                  calama.io
+                  tiportoviacon.me
             </Typography>
-                <Typography variant="subheading" id="simple-modal-description">
-                  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                <Typography variant="subheading" id="eh-modal-description">
+                  Nuove tecnologie per Lorenzo Jovanotti, un progetto di Matteo Manzinello
             </Typography>
               </div>
             </Modal>
             <Modal
-              aria-labelledby="simple-modal-title"
-              aria-describedby="simple-modal-description"
+              aria-labelledby="info-modal-title"
+              aria-describedby="info-modal-description"
               open={this.state.info}
-              onClose={this.handleCloseInfo}
-            >
+              onClose={this.handleCloseInfo}>
               <div style={styles.paper}>
                 <Typography variant="title" id="modal-title">
-                  Info
+                  Ti porto via con me...
             </Typography>
-                <Typography variant="subheading" id="simple-modal-description">
-                  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                <Typography variant="subheading" id="info-modal-description">
+                  ...ribaleremo il mondo!
             </Typography>
               </div>
             </Modal>
