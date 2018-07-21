@@ -25,8 +25,8 @@ class InformazioniScreen extends Component {
             </Typography>
                 <br />
                 <Typography>
-                    un altro progetto strampalato (ed Open Source, <a rel="noopener noreferrer" target="_blank" href="https://github.com/manzinello/tiportoviacon.me">eccolo su GitHub</a>) creato con <FavoriteIcon style={styles.heart} /> da Matteo Manzinello
-            </Typography>
+                    un altro progetto strampalato (ed Open Source, <a rel="noopener noreferrer" target="_blank" href="https://github.com/manzinello/tiportoviacon.me">eccolo su GitHub</a>) di <a href="https://matteomanzinello.com">Matteo Manzinello</a>
+                </Typography>
                 <br />
                 <Button href="mailto:ciao@matteomanzinello.com" variant="fab" color="secondary" aria-label="email">
                     <EmailIcon />
