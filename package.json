@@ -4,11 +4,11 @@
   "private": true,
   "homepage": "https://tiportoviacon.me",
   "dependencies": {
-    "@material-ui/core": "^1.4.0",
-    "@material-ui/icons": "^1.1.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-instantsearch": "^5.2.2",
+    "@material-ui/core": "^1.5.1",
+    "@material-ui/icons": "^2.0.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-instantsearch": "^5.2.3",
     "react-scripts": "1.1.4"
   },
   "scripts": {
