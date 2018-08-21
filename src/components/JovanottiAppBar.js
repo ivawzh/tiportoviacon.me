@@ -91,7 +91,7 @@ class JovanottiAppBar extends Component {
                   Ti porto via con me...
             </Typography>
                 <Typography variant="subheading" id="info-modal-description">
-                  ...ribaleremo il mondo!
+                  ...ribalteremo il mooondo!
             </Typography>
               </div>
             </Modal>
