@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 // Algolia
 import { InstantSearch, InfiniteHits, connectSearchBox, PoweredBy } from 'react-instantsearch-dom';
@@ -25,14 +26,12 @@ const styles = {
 const JovanottiSearchBox = ({ currentRefinement, refine }) =>
     <TextField
         id="jovanotti-songs"
-        label="Cerca qualsiasi cosa tu voglia!"
-        placeholder="...in questa notte fantastica!"
+        label="...in questa notte fantastica!"
         type="search"
-        InputLabelProps={{
-          shrink: true,
-        }}
         fullWidth
         value={currentRefinement}
+        margin="normal"
+        variant="outlined"
         onChange={e => refine(e.target.value)}
     />;
 
