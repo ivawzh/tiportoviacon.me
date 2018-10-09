@@ -4,12 +4,12 @@
   "private": true,
   "homepage": "https://tiportoviacon.me",
   "dependencies": {
-    "@material-ui/core": "^3.1.0",
+    "@material-ui/core": "^3.2.0",
     "@material-ui/icons": "^3.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-instantsearch": "^5.2.3",
-    "react-scripts": "1.1.5"
+    "react-instantsearch": "^5.3.1",
+    "react-scripts": "2.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,6 +20,6 @@
     "deploy": "yarn run build && echo 'tiportoviacon.me' > ./build/CNAME && gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.0"
+    "gh-pages": "^2.0.1"
   }
 }
