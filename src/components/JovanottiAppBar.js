@@ -1,40 +1,39 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
 
-import Modal from '@material-ui/core/Modal';
+import Modal from "@material-ui/core/Modal";
 
 const styles = {
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   flex: {
-    flex: 1,
+    flex: 1
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
+    marginRight: 20
   },
   paper: {
-    position: 'absolute',
+    position: "absolute",
     width: 300,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     boxShadow: 2,
     padding: 24,
     top: 24,
-    left: 'calc(50% - 150px)'
-  },
+    left: "calc(50% - 150px)"
+  }
 };
 
 class JovanottiAppBar extends Component {
-
   state = {
     eh: false,
-    info: false,
+    info: false
   };
 
   handleOpenEh = () => {
@@ -54,18 +53,24 @@ class JovanottiAppBar extends Component {
   };
 
   render() {
-
     return (
       <div style={styles.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton onClick={this.handleOpenInfo} style={styles.menuButton} color="inherit" aria-label="Menu">
-              <img src='images/bolt.png' width={48} alt='tiportoviacon.me' />
+            <IconButton
+              onClick={this.handleOpenInfo}
+              style={styles.menuButton}
+              color="inherit"
+              aria-label="Menu"
+            >
+              <img src="images/bolt.png" width={48} alt="tiportoviacon.me" />
             </IconButton>
             <Typography variant="title" color="inherit" style={styles.flex}>
               tiportoviacon.me
-          </Typography>
-            <Button color="inherit" onClick={this.handleOpenEh}>EH?!</Button>
+            </Typography>
+            <Button color="inherit" onClick={this.handleOpenEh}>
+              EH?!
+            </Button>
             <Modal
               aria-labelledby="eh-modal-title"
               aria-describedby="eh-modal-description"
@@ -75,24 +80,26 @@ class JovanottiAppBar extends Component {
               <div style={styles.paper}>
                 <Typography variant="title" id="modal-title">
                   tiportoviacon.me
-            </Typography>
+                </Typography>
                 <Typography variant="subheading" id="eh-modal-description">
-                  Nuove tecnologie per Lorenzo Jovanotti, un progetto di Matteo Manzinello
-            </Typography>
+                  Nuove tecnologie per Lorenzo Jovanotti, un progetto di Matteo
+                  Manzinello
+                </Typography>
               </div>
             </Modal>
             <Modal
               aria-labelledby="info-modal-title"
               aria-describedby="info-modal-description"
               open={this.state.info}
-              onClose={this.handleCloseInfo}>
+              onClose={this.handleCloseInfo}
+            >
               <div style={styles.paper}>
                 <Typography variant="title" id="modal-title">
                   Ti porto via con me...
-            </Typography>
+                </Typography>
                 <Typography variant="subheading" id="info-modal-description">
                   ...ribalteremo il mooondo!
-            </Typography>
+                </Typography>
               </div>
             </Modal>
           </Toolbar>
@@ -100,7 +107,6 @@ class JovanottiAppBar extends Component {
       </div>
     );
   }
-
 }
 
 export default JovanottiAppBar;
